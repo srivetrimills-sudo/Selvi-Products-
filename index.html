@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selvi Products</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f8f4ec;
+color:#333;
+}
+
+.hero img{
+width:100%;
+display:block;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:35px;
+margin:40px 0 20px;
+color:#7b3f00;
+}
+
+.about{
+text-align:center;
+padding:20px;
+line-height:1.7;
+font-size:18px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:30px 0;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+text-align:center;
+}
+
+.card h3{
+margin-bottom:10px;
+color:#7b3f00;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+margin:10px 0;
+color:#2d6a4f;
+}
+
+.btn{
+display:inline-block;
+padding:12px 20px;
+background:#7b3f00;
+color:white;
+text-decoration:none;
+border-radius:8px;
+margin-top:10px;
+}
+
+.btn:hover{
+opacity:.9;
+}
+
+.contact{
+background:#2d6a4f;
+color:white;
+padding:40px 20px;
+text-align:center;
+margin-top:40px;
+}
+
+footer{
+background:#1f4d38;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,.3);
+z-index:999;
+}
+
+.cart{
+position:fixed;
+top:20px;
+right:20px;
+background:white;
+padding:10px 15px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,.2);
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cart">
+🛒 Cart: <span id="cartCount">0</span>
+</div>
+
+<section class="hero">
+<img src="banner.jpg" alt="Selvi Products">
+</section>
+
+<div class="container">
+
+<h2 class="section-title">Welcome to Selvi Products</h2>
+
+<div class="about">
+Premium quality masala products made with care, tradition and authentic taste.
+Fresh ingredients. Pure flavour. Trusted quality.
+</div>
+
+<h2 class="section-title">Our Products</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="coriander.jpg" alt="">
+<div class="card-content">
+<h3>Coriander Powder</h3>
+<p>Freshly ground premium coriander powder.</p>
+<div class="price">₹99</div>
+<button class="btn" onclick="addToCart()">Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800" alt="">
+<div class="card-content">
+<h3>Chilli Powder</h3>
+<p>Rich colour and spicy flavour.</p>
+<div class="price">₹120</div>
+<button class="btn" onclick="addToCart()">Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1615485925873-9c1f1bb15741?w=800" alt="">
+<div class="card-content">
+<h3>Turmeric Powder</h3>
+<p>Pure turmeric with natural aroma.</p>
+<div class="price">₹90</div>
+<button class="btn" onclick="addToCart()">Add to Cart</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<section class="contact">
+<h2>Order on WhatsApp</h2>
+<br>
+<p>Fast ordering and direct customer support.</p>
+<br>
+<a class="btn"
+href="https://wa.me/919566700910?text=Hello%20Selvi%20Products,%20I%20want%20to%20place%20an%20order.">
+Order Now
+</a>
+</section>
+
+<footer>
+© 2026 Selvi Products | All Rights Reserved
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/919566700910">
+💬
+</a>
+
+<script>
+let count=0;
+
+function addToCart(){
+count++;
+document.getElementById("cartCount").innerText=count;
+}
+</script>
+
+</body>
+</html>
